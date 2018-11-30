@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="UTF-8"/>
+    <title></title>
+		 <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <h1</h1>
+    <p>Welcome to</p>
+    <button onclick="a()">按钮</button>
+    <ul id="ultext">
+    </ul>
+  </body>
+ 
+  <script type="text/javascript">
+  	var socket = io();
+  	function a(){
+  		console.log(0)
+  		socket.emit('messageClick');
+  	}
+  	//监听messageClick事件
+  	socket.on('message', function(data){
+  		var htmldatas = data.datas;
+  		var html = '';
+  		console.log(data)
+  		for (var i = 0; i < htmldatas.length; i++) {
+  			var htmldata = htmldatas[i];
+  			html += '<li>'+htmldata+'</li>';
+  		}
+  		document.getElementById('ultext').innerHTML = html;
+  	})
+  </script>
+</html>

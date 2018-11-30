@@ -20,7 +20,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 //cors
 app.use(cors({
-		origin:['http://localhost:8080'],
+	origin:['http://localhost:8080'],
     methods:['GET','POST'],
     alloweHeaders:['Conten-Type', 'Authorization']	
 }))

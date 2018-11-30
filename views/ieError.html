@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.iedie-line,
+		.iedie-clear {
+			clear: both;
+			height: 0px;
+			overflow: hidden;
+		}
+		
+		.iedie-title-wrapper .iedie-clear {
+			clear: both;
+			height: 10px;
+			overflow: hidden;
+		}
+		
+		.iedie-line {
+			background: black;
+			height: 1px;
+		}
+		
+		.iedie-close {
+			font-size: 12px;
+			color: #999;
+			float: right;
+			display: inline;
+			background: #eee;
+			text-decoration: none;
+			padding: 3px 5px;
+		}
+		
+		.iedie-title {
+			float: left;
+			padding-bottom: 14px;
+			font-size: 18px;
+			color: #333;
+		}
+		
+		.iedie-browser p {
+			padding: 0;
+			margin: 0;
+			margin-bottom: 10px;
+		}
+		
+		a {
+			text-decoration: none;
+			color: #666;
+			font-weight: bold;
+		}
+		
+		.iedie-body p {
+			margin: 1em 0;
+		}
+		
+		.iedie-body a:hover {
+			text-decoration: underline;
+		}
+		
+		.iedie-browser-desc {
+			text-decoration: none;
+			font-weight: normal;
+		}
+		
+		.iedie-browser-desc {
+			padding-top: 2px;
+			color: #999;
+		}
+		
+		a.iedie-close {
+			font-weight: normal;
+		}
+		
+		.iedie-browser-img {
+			width: 70px;
+			height: 60px;
+			float: left;
+			background-repeat: no-repeat;
+		}
+		
+		.iedie-browser-ie .iedie-browser-img {
+			background-position: 0 -70px;
+		}
+		
+		.iedie-browser-ie .iedie-browser-name {
+			padding-top: 7px
+		}
+		
+		) .iedie-browser-firefox .iedie-browser-name {
+			padding-top: 10px
+		}
+		
+		.iedie-browser-firefox .iedie-browser-img {
+			background-position: 0 -130px
+		}
+		.ieError {
+			width: 650px;
+			height: 386px;
+			margin: auto;
+			box-shadow: 0 0 25px 0px #eee;
+			font-family: "苹方";
+			padding: 20px 10px;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: #fff;
+		}
+		
+		.iedie-browser-imgqq {
+			background-image: url(//wuyongzhiyong.b0.upaiyun.com/iedie/v1.2/recommended-browsers.jpg);
+		}
+		
+		.ieError_title {
+			font-size: 16px;
+			font-weight: normal;
+		}
+		
+		.ieError_h1 {
+			font-size: 16px;
+			font-weight: normal;
+		}
+		
+		.ieError_bg {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: rgba(0, 0, 0, 0.2);
+		}
+		
+		.ieError_hide {
+			display: none;
+		}
+	</style>
+
+	<body>
+		<div class="ieError_hide">
+			<div class="ieError_bg"></div>
+			<div class="ieError">
+				<h1 class="ieError_h1">温馨提示：</h1>
+				<p class="ieError_title">
+					您正在使用的浏览器版本过低，不被本站支持，继续使用此浏览器访问本站，您可能会遇到页面样式错乱及某些功能无法正常使用的情况。 低版本的浏览器也很可能存在安全漏洞，因此为了您在网上浏览及使用网银时的信息安全，请您尽快更换最新的浏览器。
+				</p>
+				<p class="ieError_title">以下是我们推荐的几款兼顾访问速度，兼容性与安全性的常用浏览器。</p>
+				<div class="iedie-browser iedie-browser-firefox">
+					<p>
+						<div class="iedie-browser-img"><img src="http://www.firefox.com.cn/media/img/logos/firefox/logo-quantum.9c5e96634f92.png" width="80%" /></div>
+						<div class="iedie-browser-name">
+							<a href="http://www.firefox.com.cn/" target="_blank">Firefox 中文版</a>
+							<span class="iedie-browser-name-desc">- 致力于推动网络开放标准的著名开源浏览器</span>
+						</div>
+						<div class="iedie-browser-desc">支持支付宝和部分网银（如招行等），安装网银插件后可以支持绝大多数网银</div>
+						<div class="iedie-clear"></div>
+					</p>
+				</div>
+				<div class="iedie-browser iedie-browser-360">
+					<p>
+						<div class="iedie-browser-img iedie-browser-imgqq"></div>
+						<div class="iedie-browser-name">
+							<a href="http://browser.qq.com" target="_blank">QQ 浏览器</a> /
+							<a href="http://chrome.360.cn" target="_blank">360 极速浏览器</a><span class="iedie-browser-name-desc"> - 由谷歌「极速内核」驱动的浏览器</span></div>
+						<div class="iedie-browser-desc">国内所谓「极速内核」浏览器背后使用的都是来自谷歌的 Chromium 引擎，<br/>但谷歌服务在国内访问困难，推荐使用更适合国内网络环境的这两个定制版本</div>
+						<div class="iedie-clear"></div>
+					</p>
+				</div>
+				<div>
+					<br/>您还可以选择：<br/>
+					<a href="http://www.google.com/chrome" target="_blank">谷歌(Chrome)</a>、
+					<a href="http://www.opera.com/" target="_blank">欧朋(Opera)</a>、
+					<a href="http://www.liebao.cn/" target="_blank">猎豹</a>、
+					<a href="http://ie.sogou.com/" target="_blank">搜狗</a>、
+					<a href="http://se.360.cn/" target="_blank">360</a>、
+					<a href="http://www.maxthon.cn/" target="_blank">傲游</a><br/><br/>
+				</div>
+				<div class="iedie-clear"></div>
+			</div>
+		</div>
+	</body>
+
+</html>
