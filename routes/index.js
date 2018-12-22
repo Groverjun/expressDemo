@@ -14,7 +14,7 @@ var login = mysql.createConnection({
   database: 'nodetest', //数据库名
 });
 
-
+//测试git push
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
