@@ -9,8 +9,8 @@ const multer=require("multer");
 var login = mysql.createConnection({     
   host     : 'localhost',       //主机
   user     : 'root',               //MySQL认证用户名
-  password : '123456',        //MySQL认证用户密码
-  port: '3308',     //端口号
+  password : '046576LI',        //MySQL认证用户密码
+  port: '3306',     //端口号
   database: 'nodetest', //数据库名
 });
 
