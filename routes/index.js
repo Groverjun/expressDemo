@@ -17,12 +17,12 @@ var login = mysql.createConnection({
 //测试git push
 //再次测试OKOKOK
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', (req, res, next)=>{
  	res.sendfile("./views/index.html");
 });
 
 /**登录接口**/
-router.post('/login', function(req, res, next) {
+router.post('/login',(req, res, next)=>{
 		var passWord=JSON.stringify(req.body.passWord)  /*post*/
 //	var name=JSON.stringify(req.query.name)  /*get*/
 		var  userGetSql = `SELECT * FROM users WHERE password=${passWord}`; //查询
@@ -40,7 +40,7 @@ router.post('/login', function(req, res, next) {
 });
 
 /**获取必应图片接口**/
-router.get('/imgFile', function(req, res, next) {
+router.get('/imgFile',(req, res, next)=>{
 	let data=req.query;
 	let days_ago = req.query.days_ago || 0;
 	getWallpaper(res,days_ago,mkt)
@@ -88,14 +88,13 @@ var storage = multer.diskStorage({
 var upload = multer({
   storage: storage
 });
-router.post('/upload', upload.single('file'), function (req, res, next) {
+router.post('/upload', upload.single('file'),(req, res, next)=> {
 	res.send({urlFile:"http://localhost:3000/uploads/"+req.file.filename})
 });
 /*结束*/
 
 /*保存与修改markdown文件*/
-
-router.post('/markdown', function(req, res, next) {
+router.post('/markdown', (req, res, next)=>{
 		let  markdownSql = null;
 		if(req.body.id==''||req.body.id=='null'){
 			markdownSql = `INSERT INTO markdown(html,time) VALUES(?,?)`; //插入
@@ -117,7 +116,7 @@ router.post('/markdown', function(req, res, next) {
 /*结束*/
 
 /*每日一句接口*/
-router.post('/sentenceday', function(req, res, next) {
+router.post('/sentenceday', (req, res, next)=> {
 		let  sentencedaySql = null;
 		if(req.body.id==''||req.body.id=='null'){
 			sentencedaySql = `INSERT INTO sentenceday(time,sentence,author,imgUrl) VALUES(?,?,?,?)`; //插入
@@ -127,7 +126,7 @@ router.post('/sentenceday', function(req, res, next) {
 		let  sentencedayVal =[req.body.time,req.body.sentence,req.body.author,req.body.imgUrl,Number(req.body.id)];
 		console.log(sentencedaySql)
 	  var res=res
-		login.query(sentencedaySql,sentencedayVal,function (err, result) {
+		login.query(sentencedaySql,sentencedayVal, (err, result)=> {
 			if(err){
          console.log('[UPDATE ERROR] - ',err.message);
          res.status(500).send(err);
